@@ -10,7 +10,7 @@
 
  2. 画布宽高设置    
     2.1 行内设置：       
-        ```
+       ```
     <canvas id="example" width="500" height="300"></canvas> 
     如不设置的话默认宽高为300px,150px
         ```
