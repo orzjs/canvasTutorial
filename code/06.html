@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>quadraticCurve</title>
+</head>
+<body>
+<canvas id='canvas' width="500" height="500">
+    no canvas
+</canvas>
+<script>
+CanvasRenderingContext2D.prototype.sector = function (x, y, radius, sDeg, eDeg) {
+  this.save();
+  this.translate(x, y);
+  this.beginPath();
+  this.arc(0,0,radius,sDeg, eDeg);
+  this.lineTo(0,0);
+  this.closePath();
+  this.restore();
+  return this;
+  }
+
+function draw() {
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.sector(250, 250, 200, 0, Math.PI*2/3);
+  var radgrad = ctx.createRadialGradient(250,250,0,250,250,200);
+  radgrad.addColorStop(0, '#B40404');
+  radgrad.addColorStop(1, '#FE2E64');
+  ctx.fillStyle = radgrad;
+  ctx.fill();
+  ctx.sector(250, 250, 200, Math.PI*2/3, Math.PI*2/3*2);
+  var radgrad2 = ctx.createRadialGradient(250,250,0,250,250,200);
+  radgrad2.addColorStop(0, '#0101DF');
+  radgrad2.addColorStop(1, '#2E64FE');
+  ctx.fillStyle = radgrad2;
+  ctx.fill();
+  ctx.sector(250, 250, 200, Math.PI*2/3*2, Math.PI*2);
+  var radgrad3 = ctx.createRadialGradient(250,250,0,250,250,200);
+  radgrad3.addColorStop(0, '#FFBF00');
+  radgrad3.addColorStop(1, '#F3F781');
+  ctx.fillStyle = radgrad3;
+  ctx.fill();
+  ctx.beginPath();
+  ctx.translate(120, -80);
+  ctx.rotate((Math.PI/180)*25);
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.9)';
+  ctx.moveTo(260, 225);
+  ctx.lineTo(330, 100);
+  ctx.lineTo(170, 100);
+  ctx.lineTo(330, 400);
+  ctx.lineTo(170, 400);
+  ctx.lineTo(240, 275);
+  //线端变圆
+  ctx.lineCap = 'round';
+  //拐角处变圆
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = 15;
+  ctx.stroke();
+}
+draw();
+</script>
+</body>
+</html>

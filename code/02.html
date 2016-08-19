@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>line</title>
+</head>
+<body>
+<canvas id='canvas'>
+    no canvas
+</canvas>
+<script>
+function draw() {
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  
+  ctx.beginPath();
+  ctx.moveTo(52, 40);
+  ctx.lineTo(70, 10);
+  ctx.lineTo(25, 10);
+  ctx.lineTo(70, 90);
+  ctx.lineTo(25, 90);
+  ctx.lineTo(42, 62);
+  ctx.lineWidth = 5;
+  ctx.stroke();
+  ctx.font = "20px serif";
+  ctx.fillText("UnitedStack", 5, 115);
+}
+draw();
+</script>
+</body>
+</html>

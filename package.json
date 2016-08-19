@@ -1,0 +1,19 @@
+{
+  "name": "canvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.gitbook.com/pengjiyuan/canvas.git"
+  },
+  "author": "PJY",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-plugin-code-editor": "^1.2.0",
+    "gitbook-plugin-sectionx": "^3.0.0"
+  }
+}

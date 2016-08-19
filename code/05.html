@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>quadraticCurve</title>
+</head>
+<body>
+<canvas id='canvas'>
+    no canvas
+</canvas>
+<script>
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext){
+    var ctx = canvas.getContext('2d');
+
+    var rectangle = new Path2D();
+    rectangle.rect(20, 20, 50, 50);
+
+    var circle = new Path2D();
+    circle.arc(120, 35, 25, 0, 2 * Math.PI);
+
+    var svg = new Path2D("M10 10 h 80 v 80 h -80 Z");
+
+    ctx.stroke(rectangle);
+    ctx.fill(circle);
+    ctx.stroke(svg);
+  }
+}
+draw();
+</script>
+</body>
+</html>
