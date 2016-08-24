@@ -7,6 +7,8 @@
 
 [Demo](http://www.cat666.com/mydemo/FlappyBird/index.html)    
 
+[Github](https://github.com/PengJiyuan/FlappyBird)   
+
 <!--sec data-title="What we need to prepare" data-id="section0" data-show=true data-collapse=true ces-->
 * Bird Class
 * Pipe Class
