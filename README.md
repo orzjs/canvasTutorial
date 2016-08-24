@@ -3,4 +3,4 @@
 
 
 
-# Some Canvas note
+# A canvas simple tutorial
